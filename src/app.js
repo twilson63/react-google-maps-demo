@@ -6,31 +6,30 @@ import {
   Marker
 } from 'react-google-maps'
 
-// higher order component
 const GettingStartedGoogleMap = withGoogleMap(props => (
   <GoogleMap
     ref={props.onMapLoad}
-    defaultZoom={3}
-    defaultCenter={{ lat: -25.363882, lng: 131.044922 }}
+    defaultZoom={1}
+    defaultCenter={ { lat: -25.363882, lng: 131.044922 }}
     onClick={props.onMapClick}
-    >
+  >
     {props.markers.map((marker, index) =>
       <Marker {...marker} />
     )}
   </GoogleMap>
 ))
 
-
 const App = React.createClass({
   render() {
     return (
       <div>
+        <h1>Maps Demo</h1>
         <GettingStartedGoogleMap
           containerElement={
-            <div style={{ height: '400px' }} />
+            <div style={{height: '400px'}}></div>
           }
           mapElement={
-            <div style={{ height: '400px' }} />
+            <div style={{height: '400px'}}></div>
           }
           onMapLoad={() => null }
           onMapClick={() => null }
@@ -43,8 +42,7 @@ const App = React.createClass({
             defaultAnimation: 2,
           }]}
           onMarkerRightClick={() => null }
-          >
-        </GettingStartedGoogleMap>
+          />
       </div>
     )
   }
