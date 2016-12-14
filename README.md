@@ -1,5 +1,7 @@
 # Demo React Google maps
 
+https://github.com/tomchentw/react-google-maps
+
 - Setup API Credentials
 
 - Add SCRIPT Tag to your head
